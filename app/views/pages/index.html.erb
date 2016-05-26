@@ -1,1 +1,7 @@
-<%= link_to "Login", github_login_path %>
+INDEX TEST
+
+<br />
+
+<% if current_user %>
+Current_user oauth token = <%= "#{current_user.oauth_token}" %>
+<% end %>
