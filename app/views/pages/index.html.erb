@@ -3,5 +3,15 @@ INDEX TEST
 <br />
 
 <% if current_user %>
-Current_user oauth token = <%= "#{current_user.oauth_token}" %>
+  Current_user oauth token = <%= "#{current_user.oauth_token}" %>
+  <h1><%= "#{current_user.name}" %></h1>
+  <h3>Number of starred repos: <%= current_user.count(:starred) %></h3>
+  <h3>Followers: <%= current_user.count(:followers) %></h3>
+  <h3>Following: <%= current_user.count(:following) %></h3>
+
+  <img src="<%= current_user.profile_pic_url %>">
+  <br />
+  <br />
+
+  <%= link_to  %>
 <% end %>
